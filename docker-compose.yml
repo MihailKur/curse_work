@@ -19,6 +19,8 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
       - "3306:3306"
+    volumes:
+      - hosting-app-db:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -30,3 +32,6 @@ services:
       PMA_ARBITRARY: ${PMA_ARBITRARY}
     ports:
       - 8081:80
+
+volumes:
+  hosting-app-db:

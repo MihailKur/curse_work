@@ -7,18 +7,14 @@
 </head>
 <body>
     <div class="form_auth">
-        <form  class="form_auth" action="" method="">
-            <label>Фамилия и имя</label>
-            <input type="text" placeholder="Введите фамилию и имя">
+        <form action="" method="">
             <label>Логин</label>
             <input type="text" placeholder="Введите логин">
             <label>Пароль</label>
             <input type="text" placeholder="Введите пароль">
-            <label>Email</label>
-            <input type="text" placeholder="Введите Email">
-            <button>Зарегистрироваться</button>
+            <button>Войти в аккаунт</button>
             <p>
-                Уже есть аккаунт? - <a href="#">авторизируйтесь тут</a>
+                Нет аккаунта? - <a href="#">можете зарегестрироваться тут</a>
             </p>
         </form>
     </div>

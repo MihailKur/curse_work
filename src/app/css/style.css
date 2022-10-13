@@ -28,7 +28,37 @@ button{
     cursor: pointer;
 }
 .form_auth{
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.navbar{
+    width: 100%;
+    height: 50px;
+}
+
+.logo{
+    color: red;
+    font-family: "Bauhaus 93", serif;
+}
+.navbar-cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    b-color: white;
+    padding: 0 50px;
+    height: 100%;
+}
+.menu-list{
+    display: flex;
+    list-style: none;
+}
+.menu-list-item{
+    color: red;
+    font-family: "Britannic Bold";
+}
+button{
+
+}
+

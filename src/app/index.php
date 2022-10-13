@@ -3,18 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Авторизация</title>
-    <link rel="stylesheet" href="/app/css/style.css"
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <form action="" method="">
-        <label>Логин</label>
-        <input type="text" placeholder="Введите логин">
-        <label>Пароль</label>
-        <input type="text" placeholder="Введите пароль">
-        <button>Войти в аккаунт</button>
-        <p>
-            Нет аккаунта? - <a href="#">можете зарегестрироваться тут</a>
-        </p>
-    </form>
+<div class="navbar">
+    <div class="navbar-cont">
+        <h1 class="logo">MegaTube</h1>
+        <ul class="menu-list">
+            <li class="menu-list-item">Главная страница</li>
+            <li class="menu-list-item">Видео</li>
+            <li class="menu-list-item">Войти в аккаунт</li>
+            <li class="menu-list-item">Регистарция</li>
+        </ul>
+    </div>
+    <hr>
+</div>
+<button>Загрузить видео</button>
 </body>
 </html>
