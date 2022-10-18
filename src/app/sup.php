@@ -10,12 +10,12 @@
 </head>
 <body>
     <div class="form_auth">
-        <form action="" method="">
+        <form action="include/signin.php" method="post">
             <label>Логин</label>
-            <input type="text" placeholder="Введите логин">
+            <input type="text" name="login" placeholder="Введите логин">
             <label>Пароль</label>
-            <input type="text" placeholder="Введите пароль">
-            <button class="but_reg">Войти в аккаунт</button>
+            <input type="text" name="password" placeholder="Введите пароль">
+            <button class="but_reg" type="submit">Войти в аккаунт</button>
             <p>
                 Нет аккаунта? - <a href="#">можете зарегестрироваться тут</a>
             </p>
