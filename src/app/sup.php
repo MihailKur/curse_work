@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +15,17 @@
             <input type="text" placeholder="Введите логин">
             <label>Пароль</label>
             <input type="text" placeholder="Введите пароль">
-            <button>Войти в аккаунт</button>
+            <button class="but_reg">Войти в аккаунт</button>
             <p>
                 Нет аккаунта? - <a href="#">можете зарегестрироваться тут</a>
+            </p>
+            <p class="mess">
+                <?php
+                    if (isset($_SESSION['message'])){
+                        echo $_SESSION['message'];
+                    }
+                    unset($_SESSION['message']);
+                ?>
             </p>
         </form>
     </div>

@@ -21,7 +21,7 @@ input{
     border-bottom: 2px solid #e3e3e3;
     outline: none;
 }
-button{
+.but_reg{
     padding: 10px;
     background: green;
     border: unset;
@@ -33,9 +33,11 @@ button{
     align-items: center;
     justify-content: center;
 }
+
 .navbar{
     width: 100%;
-    height: 50px;
+    height: 70px;
+    background-color: black;
 }
 
 .logo{
@@ -56,9 +58,24 @@ button{
 }
 .menu-list-item{
     color: red;
-    font-family: "Britannic Bold";
+    font-family: "Bahnschrift";
+    margin: 100px;
+    text-decoration: none;
 }
-button{
+.button{
+    background: linear-gradient(to bottom, #ff0000 0%, #ff3399 100%);
+    color: black;
+    text-decoration:none;
+    display:block;
+    width: 100px;
+    text-align: center;
+    transition:all 0.3s;
+    font-family: Bahnschrift;
+}
 
+.mess{
+    padding-top: 10px;
+    text-align: center;
 }
+
 
