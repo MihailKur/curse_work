@@ -78,4 +78,17 @@ input{
     text-align: center;
 }
 
+.download{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 350px;
+}
+
+
+.input_video_button{
+    border-style: none;
+    background-color: darkgray;
+}
 

@@ -18,7 +18,7 @@
             <input type="text" name="email" placeholder="Введите Email">
             <label>Изображение профиля</label>
             <input type="file" name="image">
-            <button class="but_reg">Зарегистрироваться</button>
+            <button class="but_reg" type="submit">Зарегистрироваться</button>
             <p>
                 Уже есть аккаунт? - <a href="#">авторизируйтесь тут</a>
             </p>
