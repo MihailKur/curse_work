@@ -1,23 +1,33 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Авторизация</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>Title</title>
 </head>
 <body>
-<div class="navbar">
-    <div class="navbar-cont">
-        <h1 class="logo">MegaTube</h1>
-        <ul class="menu-list">
-            <li><a href="#" class="menu-list-item">Главная страница</a></li>
-            <li><a href="#" class="menu-list-item">Видео</a></li>
-            <li><a href="#" class="menu-list-item">Войти в аккаунт</a></li>
-            <li><a href="#" class="menu-list-item">Регистрация</a></li>
-        </ul>
-        <a href="#" class="button">Загрузить видео</a>
+    <div class="form_auth">
+        <form action="include/signin.php" method="post">
+            <label>Логин</label>
+            <input type="text" name="login" placeholder="Введите логин">
+            <label>Пароль</label>
+            <input type="text" name="password" placeholder="Введите пароль">
+            <button class="but_reg" type="submit">Войти в аккаунт</button>
+            <p>
+                Нет аккаунта? - <a href="#">можете зарегестрироваться тут</a>
+            </p>
+            <p class="mess">
+                <?php
+                    if (isset($_SESSION['message'])){
+                        echo $_SESSION['message'];
+                    }
+                    unset($_SESSION['message']);
+                ?>
+            </p>
+        </form>
     </div>
-    <hr>
-</div>
 </body>
 </html>

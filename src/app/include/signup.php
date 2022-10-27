@@ -17,4 +17,4 @@
     VALUES (NULL, '$full_name', '$login', '$password', '$email', '$path')");
 
     $_SESSION['message'] = 'Регистрация прошла успешно';
-    header('Location: ../sup.php');
+    header('Location: ../index.php');

@@ -30,6 +30,7 @@
         }
 
         //работа с бд
+        $user_id_video = $_SESSION['user']['id'];
 
         $connect = mysqli_connect('db:3306', 'root','123456', 'curse');
 
@@ -38,7 +39,7 @@
         $path_img_db = time().$_FILES['img_video']['name'];
 
         mysqli_query($connect, "INSERT INTO `videos` (`id_video`, `name_video`, `video_name`, `img_video`, `id_user`) 
-                    VALUES (NULL, '$name_video', '$path_video_db', '$path_img_db', NULL)");
+                    VALUES (NULL, '$name_video', '$path_video_db', '$path_img_db', '$user_id_video')");
 
         $_SESSION['message'] = 'Ваше видео успешно загруженно';
         header('Location: ../download_video.php');

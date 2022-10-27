@@ -18,9 +18,11 @@
             "image" => $user['image'],
             "email" => $user['email']
         ];
-        header('Location: ../index.php');
+        $_SESSION['user_id'] = $user['id'];
+
+        header('Location: ../main.php');
 
     } else {
         $_SESSION['message'] = 'Неверный логин или пароль';
-        header('Location: ../sup.php');
+        header('Location: ../index.php');
     }
