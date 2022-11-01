@@ -17,17 +17,27 @@ session_start();
             <li><a href="#" class="menu-list-item">Видео</a></li>
             <?php
             if ($_SESSION['user']){
-                echo '<li><a href="#" class="menu-list-item">Выйти из аккаунта</a></li>';
+                echo '<li><a href="logout.php" class="menu-list-item">Выйти из аккаунта</a></li>';
+                echo '<li><a href="#" class="menu-list-item">Личный кабинет</a></li>';
             }else{
                 echo '<li><a href="index.php" class="menu-list-item">Войти в аккаунт</a></li>';
                 echo '<li><a href="reg.php" class="menu-list-item">Регистрация</a></li>';
             }
             ?>
-
         </ul>
         <a href="download_video.php" class="button">Загрузить видео</a>
     </div>
     <hr>
+</div>
+<div class="videos_on_page">
+    <?php
+    $connect = mysqli_connect('db:3306', 'root','123456', 'curse');
+    $res = mysqli_query($connect, "SELECT * FROM videos ORDER BY id_video DESC");
+
+    while ($video = mysqli_fetch_assoc($res)){?>
+        <img src="uploads/<?=$video['img_video']?>" width="100px" height="100px">
+    <?php
+    }?>
 </div>
 </body>
 </html>

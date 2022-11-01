@@ -36,7 +36,7 @@
 
         $name_video = $_POST['name_video'];
 
-        $path_img_db = time().$_FILES['img_video']['name'];
+        $path_img_db = $_FILES['img_video']['name'];
 
         mysqli_query($connect, "INSERT INTO `videos` (`id_video`, `name_video`, `video_name`, `img_video`, `id_user`) 
                     VALUES (NULL, '$name_video', '$path_video_db', '$path_img_db', '$user_id_video')");
