@@ -26,21 +26,19 @@ session_start();
         </ul>
         <a href="download_video.php" class="button">Загрузить видео</a>
     </div>
-    <hr>
 </div>
-<div class="videos_on_page">
-    <?php
-    $connect = mysqli_connect('db:3306', 'root','123456', 'curse');
-    $res_video = mysqli_query($connect, "SELECT * FROM videos INNER JOIN users ON videos.id_user = users.id ORDER BY id_video DESC");
-
-    $format = "video_player.php?video_name=%s";
-
-    while ($video = mysqli_fetch_assoc($res_video)){?>
-        <a href="<?=sprintf($format, $video['name_video'])?>"><img src="uploads/<?=$video['img_video']?>" width="440px" height="248px"></a>
-        <p><?=$video['login']?></p>
-    <?php
-    }
-    ?>
+    <hr>
+<div class="profile">
+    <div class="profile_data">
+        <form>
+            <img src="<?=$_SESSION['user']['image']?>" class="user_image_profile">
+            <label class="profile_data">Ваши фамилия и имя</label>
+            <input value="<?=$_SESSION['user']['full_name']?>">
+            <label class="profile_data">Ваш логин</label>
+            <input value="<?=$_SESSION['user']['login']?>">
+            <label class="profile_data">Ваш Email</label>
+            <input value="<?=$_SESSION['user']['email']?>">
+        </form>
+    </div>
 </div>
 </body>
-</html>

@@ -30,5 +30,8 @@ session_start();
         </p>
     </div>
 </div>
+<div class="button_back">
+    <a href="main.php"><button class="button_back_click">Вернуться назад</button></a>
+</div>
 </body>
 </html>

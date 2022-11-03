@@ -1,6 +1,13 @@
 <?php
-session_start();
-?>
+    $get_video_name = $_GET['video_name'];
+
+    $connect = mysqli_connect('db:3306', 'root','123456', 'curse');
+    $query = "SELECT * FROM videos WHERE videos.name_video = %s";
+    $video_path = mysqli_query($connect, sprintf($query, $get_video_name));
+
+    $video_arr = mysqli_fetch_assoc($video_path);
+    session_start();
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,19 +35,7 @@ session_start();
     </div>
     <hr>
 </div>
-<div class="videos_on_page">
-    <?php
-    $connect = mysqli_connect('db:3306', 'root','123456', 'curse');
-    $res_video = mysqli_query($connect, "SELECT * FROM videos INNER JOIN users ON videos.id_user = users.id ORDER BY id_video DESC");
-
-    $format = "video_player.php?video_name=%s";
-
-    while ($video = mysqli_fetch_assoc($res_video)){?>
-        <a href="<?=sprintf($format, $video['name_video'])?>"><img src="uploads/<?=$video['img_video']?>" width="440px" height="248px"></a>
-        <p><?=$video['login']?></p>
-    <?php
-    }
-    ?>
+<div class="video_watch">
+    <video src="<?=$video_arr['video_name']?>" controls></video>
 </div>
 </body>
-</html>

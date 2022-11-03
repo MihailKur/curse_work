@@ -17,7 +17,7 @@
             <input type="text" name="password" placeholder="Введите пароль">
             <button class="but_reg" type="submit">Войти в аккаунт</button>
             <p>
-                Нет аккаунта? - <a href="#">можете зарегестрироваться тут</a>
+                Нет аккаунта? - <a href="reg.php">можете зарегестрироваться тут</a>
             </p>
             <p class="mess">
                 <?php
