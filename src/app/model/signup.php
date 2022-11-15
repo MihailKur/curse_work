@@ -1,8 +1,7 @@
 <?php
     session_start();
 
-    require_once 'connect.php';
-    $connect = mysqli_connect('db:3306', 'root','123456', 'curse');
+    $connect = mysqli_connect('db:3306', 'root', '123456', 'curse');
 
     $full_name = $_POST['full_name'];
     $login = $_POST['login'];
@@ -17,4 +16,6 @@
     VALUES (NULL, '$full_name', '$login', '$password', '$email', '$path')");
 
     $_SESSION['message'] = 'Регистрация прошла успешно';
-    header('Location: ../index.php');
+    header('Location: ../view/index.php');
+
+

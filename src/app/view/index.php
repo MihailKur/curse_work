@@ -6,11 +6,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Авторизация</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="form_auth">
-        <form action="include/signin.php" method="post">
+        <form  method="post" action="../model/index_mod.php">
             <label>Логин</label>
             <input type="text" name="login" placeholder="Введите логин">
             <label>Пароль</label>
@@ -21,10 +21,10 @@
             </p>
             <p class="mess">
                 <?php
-                    if (isset($_SESSION['message'])){
-                        echo $_SESSION['message'];
-                    }
-                    unset($_SESSION['message']);
+                if (isset($_SESSION['message'])){
+                    echo $_SESSION['message'];
+                }
+                unset($_SESSION['message']);
                 ?>
             </p>
         </form>

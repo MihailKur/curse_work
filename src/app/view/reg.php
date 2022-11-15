@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Авторизация</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="form_auth">
-        <form  class="form_auth" action="include/signup.php" method="post" enctype="multipart/form-data">
+        <form class="form_auth" action="../model/signup.php" method="post" enctype="multipart/form-data">
             <label>Фамилия и имя</label>
             <input type="text" name="full_name" placeholder="Введите фамилию и имя">
             <label>Логин</label>

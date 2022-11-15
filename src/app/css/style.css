@@ -92,3 +92,43 @@ input{
     background-color: darkgray;
 }
 
+.user_image_profile{
+    width: 440px;
+    height: 248px;
+}
+
+.button_back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_back_click{
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em ;
+    background: rgb(64,199,129);
+}
+.profile_data{
+    margin-top: 10px;
+}
+.button_back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_back_click{
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em ;
+    background: rgb(64,199,129);
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
