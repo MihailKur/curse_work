@@ -28,18 +28,26 @@ session_start();
         <a href="../view/download_video.php" class="button">Загрузить видео</a>
     </div>
 </div>
-<div class="videos_on_page">
+<div>
     <?php
-    $format = "../view/video_player.php?id_video=%u";
-    while ($video = mysqli_fetch_assoc($res_video)){?>
+    $user_id = $_SESSION['user']['id'];
+    $connect = mysqli_connect('db:3306', 'root', '123456', 'curse');
+    $user_video = mysqli_query($connect, "SELECT * FROM videos WHERE id_user = $user_id");
+    ?>
+    <div class="videos_on_page">
+    <?
+    while ($videos = mysqli_fetch_assoc($user_video)){?>
         <div class="video">
-        <a href="<?=sprintf($format, $video['id_video'])?>"><img src="../uploads/<?=$video['img_video']?>" width="440px" height="248px"></a>
-        <p>User: <?=$video['login']?></p>
-        <p>Video: <?=$video['name_video']?></p>
+        <img src="../uploads/<?=$videos['img_video']?>" width="440px" height="248px">
+        <p><?=$videos['name_video']?></p>
+        <form action="../controller/video_controller.php" method="GET">
+            <input type="hidden" value="<?=$videos['id_video']?>" name="id_video">
+            <input type="hidden" value="DELETE" name="request_method">
+            <button>Delete</button>
+        </form>
         </div>
-        <?php
+    <?
     }
     ?>
+    </div>
 </div>
-</body>
-</html>

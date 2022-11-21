@@ -16,8 +16,9 @@ session_start();
             <li><a href="../controller/show_video.php" class="menu-list-item">Главная страница</a></li>
             <?php
             if ($_SESSION['user']){
-                echo '<li><a href="../model/logout.php" class="menu-list-item">Выйти из аккаунта</a></li>';
+                echo '<li><a href="../controller/logout_user.php" class="menu-list-item">Выйти из аккаунта</a></li>';
                 echo '<li><a href="../view/cabinet.php" class="menu-list-item">Личный кабинет</a></li>';
+                echo '<li><a href="../view/your_videos.php" class="menu-list-item">Ваши видео</a></li>';
             }else{
                 echo '<li><a href="../view/index.php" class="menu-list-item">Войти в аккаунт</a></li>';
                 echo '<li><a href="../view/reg.php" class="menu-list-item">Регистрация</a></li>';

@@ -1,4 +1,5 @@
 <?php
+include "../controller/make_person.php";
     session_start();
 
     $connect = mysqli_connect('db:3306', 'root', '123456', 'curse');
@@ -11,11 +12,6 @@
     $path = 'uploads/' . time() . $_FILES['image']['name'];
     move_uploaded_file($_FILES['image']['tmp_name'], '../' . $path);
 
-
-    mysqli_query($connect, "INSERT INTO `users` (`id`, `full_name`, `login`, `password`, `email`, `image`) 
-    VALUES (NULL, '$full_name', '$login', '$password', '$email', '$path')");
-
-    $_SESSION['message'] = 'Регистрация прошла успешно';
-    header('Location: ../view/index.php');
+    makeUser($connect, $full_name, $login, $password, $email, $path);
 
 

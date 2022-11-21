@@ -132,3 +132,54 @@ input{
     justify-content: center;
     margin-top: 200px;
 }
+
+.videos_on_page{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+.video_watch{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-color:#35363a;
+    padding-top:5px;
+}
+.video{
+    margin-top:15px;
+}
+
+.comments_video{
+    display:flex;
+    flex-direction:column;
+}
+.comm{
+    margin-top:10px;
+}
+.textcomment{
+    margin-top:10px;
+    margin-bottom:10px;
+    width: 60%;
+    height: 100px;
+    padding: 10px;
+    outline: 0;
+    border: 3px solid #1c87c9;
+    line-height: 20px;
+}
+p{
+    font-family: "Berlin Sans FB";
+    font-size: 18px;
+}
+.body_reg{
+    background-color: #1c87c9;
+}
+.name_video{
+    font-family: "Berlin Sans FB";
+    font-size: 30px;
+    color: #e3e3e3;
+}
+.user_video{
+    font-family: "Berlin Sans FB";
+    font-size: 25px;
+    color: #e3e3e3;
+}

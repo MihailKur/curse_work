@@ -11,7 +11,7 @@ session_start();
 <body>
 <div class="download">
     <div class="download_block">
-        <form action="../model/video_upload/upload.php" class="form_video_download" method="post" enctype="multipart/form-data">
+        <form action="../controller/video_controller.php" class="form_video_download" method="post" enctype="multipart/form-data">
             <label>Название видео</label>
             <input type="text" name="name_video" placeholder="Введите название видео">
             <label>Добавьте фото превью</label>
@@ -31,7 +31,7 @@ session_start();
     </div>
 </div>
 <div class="button_back">
-    <a href="main.php"><button class="button_back_click">Вернуться назад</button></a>
+    <a href="../controller/show_video.php"><button class="button_back_click">Вернуться назад</button></a>
 </div>
 </body>
 </html>

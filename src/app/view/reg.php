@@ -5,7 +5,7 @@
     <title>Авторизация</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="body_reg">
     <div class="form_auth">
         <form class="form_auth" action="../model/signup.php" method="post" enctype="multipart/form-data">
             <label>Фамилия и имя</label>

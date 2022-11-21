@@ -1,13 +1,6 @@
 <?php
-    $get_video_name = $_GET['id_video'];
-
-    $connect = mysqli_connect('db:3306', 'root','123456', 'curse');
-    $query = "SELECT * FROM videos WHERE videos.id_video = %u";
-    $video_path = mysqli_query($connect, sprintf($query, $get_video_name));
-
-    $video_arr = mysqli_fetch_assoc($video_path);
-    session_start();
-    ?>
+include "../controller/video_player.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +16,9 @@
             <li><a href="../controller/show_video.php" class="menu-list-item">Главная страница</a></li>
             <?php
             if ($_SESSION['user']){
-                echo '<li><a href="../model/logout.php" class="menu-list-item">Выйти из аккаунта</a></li>';
+                echo '<li><a href="../controller/logout_user.php" class="menu-list-item">Выйти из аккаунта</a></li>';
                 echo '<li><a href="../view/cabinet.php" class="menu-list-item">Личный кабинет</a></li>';
+                echo '<li><a href="../view/your_videos.php" class="menu-list-item">Ваши видео</a></li>';
             }else{
                 echo '<li><a href="../view/index.php" class="menu-list-item">Войти в аккаунт</a></li>';
                 echo '<li><a href="../view/reg.php" class="menu-list-item">Регистрация</a></li>';
@@ -35,6 +29,22 @@
     </div>
 </div>
 <div class="video_watch">
-    <video src="<?=$video_arr['video_name']?>" controls></video>
+    <video src="<?=$video_arr['video_name']?>" controls width="1178px" height="663px"></video>
+    <p class="name_video"><?=$video_arr['name_video']?></p>
+    <p class="user_video"><?=$video['login']?></p>
+</div>
+
+<div class="comments">
+    <h1>Оставьте свой комментарий</h1>
+    <form action="" method="post">
+        <div class="comments_video">
+            <label class="comm">Напишите ваш комментарий</label>
+            <textarea name="comment" class="textcomment" rows="3"></textarea>
+        </div>
+        <button class="button_back_click">Отправить</button>
+    </form>
+</div>
+<div class="the_main_comments">
+
 </div>
 </body>

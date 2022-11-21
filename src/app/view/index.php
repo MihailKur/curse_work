@@ -8,7 +8,7 @@
     <title>Авторизация</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+<body class="body_reg">
     <div class="form_auth">
         <form  method="post" action="../model/index_mod.php">
             <label>Логин</label>
