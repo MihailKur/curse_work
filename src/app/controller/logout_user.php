@@ -3,4 +3,4 @@
 require '../model/logout.php';
 
 user_logout();
-header('Location: ../view/main.php');
+header('Location: show_video.php');

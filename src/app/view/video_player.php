@@ -36,7 +36,8 @@ include "../controller/video_player.php";
 
 <div class="comments">
     <h1>Оставьте свой комментарий</h1>
-    <form action="" method="post">
+    <form action="../controller/comments.php" method="post">
+        <input type="hidden" value="<?=$video_arr['id_video']?>" name="id_video">
         <div class="comments_video">
             <label class="comm">Напишите ваш комментарий</label>
             <textarea name="comment" class="textcomment" rows="3"></textarea>

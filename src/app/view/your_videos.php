@@ -30,9 +30,7 @@ session_start();
 </div>
 <div>
     <?php
-    $user_id = $_SESSION['user']['id'];
-    $connect = mysqli_connect('db:3306', 'root', '123456', 'curse');
-    $user_video = mysqli_query($connect, "SELECT * FROM videos WHERE id_user = $user_id");
+    include "../model/show_your_video.php"
     ?>
     <div class="videos_on_page">
     <?
