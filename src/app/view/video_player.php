@@ -43,9 +43,21 @@ include "../controller/video_player.php";
             <textarea name="comment" class="textcomment" rows="3"></textarea>
         </div>
         <button class="button_back_click">Отправить</button>
+
     </form>
 </div>
 <div class="the_main_comments">
-
+    <?include "../model/show_comments.php";
+    while ($comments = mysqli_fetch_assoc($video_comment)){
+            $user_login = $comments['id_user_comment'];
+            $user = mysqli_query($connect, "SELECT * FROM users where id = $user_login");
+            $user_login_comm = mysqli_fetch_assoc($user);
+        ?>
+        <div class="comments_under">
+        <p>User: <?=$user_login_comm['login']?></p>
+        <p>Comment: <?=$comments['comment']?></p>
+        </div>
+    <?}
+    ?>
 </div>
 </body>

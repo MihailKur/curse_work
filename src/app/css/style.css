@@ -183,3 +183,8 @@ p{
     font-size: 25px;
     color: #e3e3e3;
 }
+
+.comments_under{
+    margin-top:10px;
+    border:3px solid;
+}

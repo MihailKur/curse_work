@@ -7,8 +7,11 @@ if ($request_method == "GET") {
             $connect = mysqli_connect('db:3306', 'root', '123456', 'curse');
 
             $id_video = $_GET['id_video'];
-            $sql = "DELETE FROM videos WHERE id_video = $id_video";
-            mysqli_query($connect, $sql);
+            $sql_first = "DELETE FROM comments WHERE id_video_comment = $id_video";
+            mysqli_query($connect,$sql_first);
+
+            $sql_sec = "DELETE FROM videos WHERE id_video = $id_video";
+            mysqli_query($connect, $sql_sec);
 
             header("Location: ../view/your_videos.php");
         }
